@@ -1,13 +1,20 @@
+import React from 'react';
+import { BrowserRouter as Router, Route,} from "react-router-dom";
+import ItemList from './ItemList';
+import ItemDetail from './ItemDetail';
 
-import React from "react";
-import './../styles/App.css';
-
-const App = () => {
+function App() {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
+    <Router>
+      <div className="App">
+        {/* <h1>Item Browser</h1> */}
+       
+          <Route exact path="/" component={ItemList} />
+          <Route path="/items/:id" component={ItemDetail} />
+       
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
