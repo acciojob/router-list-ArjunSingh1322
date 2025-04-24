@@ -21,7 +21,7 @@ function ItemDetail() {
 
   return (
     <div>
-      <h2>{item.name}</h2>
+      <h1>{item.name}</h1>
       <p>{item.description}</p>
     </div>
   );
